@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const ctrlScooter = require('../controllers/Scooter');
+const ctrlScooter = require('../controllers/scooter');
 
 router.get('/scooters', ctrlScooter.getScooters);
 router.post('/scooters', ctrlScooter.createScooter);
