@@ -7,7 +7,7 @@ var logger = require("morgan");
 // var indexRouter = require('./APP_SERVER/routes/index');
 var usersRouter = require("./APP_SERVER/routes/users");
 
-require("./app_server/models/db");
+require("./APP_SERVER/models/db");
 //const apiRouter = require('./APP_API/routes/bike');
 
 const bikeRouter = require("./APP_API/routes/bike");
