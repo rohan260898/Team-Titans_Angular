@@ -1,7 +1,7 @@
 const res = require("express/lib/response");
 const { status } = require("express/lib/response");
 const mongoose = require("mongoose");
-const Scooter = mongoose.model("scooter");
+const Scooter = mongoose.model("Scooter");
 
 const getScooters = (req, res) => {
   Scooter.find().exec(function (err, scooterdata) {
