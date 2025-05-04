@@ -1,0 +1,53 @@
+<div class="row">
+    <!-- book image -->
+    <div class="col-md-6">
+        <h1 style="margin: 6%;color: #f79522;">{{pageContent.header.name}} - {{pageContent.header.launchYear}}</h1>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="card text-center col-md-6 col-sm-12" style="margin: 0 auto 3% auto;">
+            <img src="{{pageContent.header.image}}" class="img-responsive" alt="..."  style='width:100%; height:400px;'>
+            <div class="card-body">
+                <span *ngFor="let item of [].constructor(pageContent.header.rating)" class="fa fa-star" style='color: orange;font-size: xx-large;'></span>
+                <span *ngFor="let item of [].constructor(5 - pageContent.header.rating)" class="fa fa-star-o" style='color: orange;font-size: xx-large;'></span>
+            </div>
+            
+        </div>
+    </div>
+    <div class="col-md-8 text-center" style="margin: 0 auto 3% auto;">
+        <table class="table table-bordered border-dark">
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Description</th>
+                    <th>Colors</th>
+                    <th>Price</th>
+                    <th>Seats</th>
+                    <th>Launch Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{pageContent.header.brand}}</td>
+                    <td>{{pageContent.header.description}}</td>
+                    <td>{{pageContent.header.color}}</td>
+                    <td>{{pageContent.header.price}}</td>
+                    <td>{{pageContent.header.seats}}</td>
+                    <td>{{pageContent.header.launchYear}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="text-center">
+        <a href="javascript:void(0)" (click)="editData(pageContent)">
+            <button class="btn btn-primary">Edit</button>
+        </a>
+        <a href="javascript:void(0)" (click)="deleteData(pageContent)" style="margin-left: 3%;">
+            <button class="btn btn-primary">Delete</button>
+        </a>
+    </div>
+    <div style="margin: 0 0 3% 0;"></div>
+</div>

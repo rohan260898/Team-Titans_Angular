@@ -1,0 +1,65 @@
+<style>
+  .container-fluid form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 80px;
+  }
+</style>
+<br />
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-12">
+      <form (ngSubmit)="createNewAccessory(newAccessory)">
+        <h2 style="color: #f79522; text-align: center">Create Accessory</h2>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            [(ngModel)]="newAccessory.name"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="type">Type:</label>
+          <input
+            [(ngModel)]="newAccessory.type"
+            class="form-control"
+            id="type"
+            name="type"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input
+            [(ngModel)]="newAccessory.price"
+            class="form-control"
+            id="price"
+            name="price"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="image">Image:</label>
+          <input
+            [(ngModel)]="newAccessory.image"
+            class="form-control"
+            id="image"
+            name="image"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+</div>

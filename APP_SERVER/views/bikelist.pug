@@ -1,0 +1,33 @@
+extends layout
+
+block content 
+  app-list
+  //- heading
+  //- #banner.page-header
+  //-   .row(style="color:black;") 
+  //-     .col-md-6.col-sm-12
+  //-       h3 List of Bikes
+  //-   .col-md-12.text-right
+  //-     a(href=`/new`)
+  //-       h3 
+  //-         button.btn.btn-primary(type='submit') Add Bike
+  //- //-loop to show books  
+  //- .row
+  //-   each bike in bikes
+  //-     .col-md-4.text-center
+  //-       .card
+  //-         img.card-img-top(src=bike.image style='width:100%; height:300px;')
+  //-       .card-body
+  //-       h3.card-title(style="color:black;") 
+  //-         p #{bike.name}
+  //-       h4.card-author(style="color:black;")
+  //-         p by #{bike.brand}
+  //-       -for(var i=1; i <= bike.rating; i++)
+  //-         span.glyphicon.glyphicon-star(style='color: orange;')
+  //-       -for(var i=bike.rating; i < 5; i++)
+  //-         span.glyphicon.glyphicon-star-empty(style='color: orange;')
+  //-       br
+  //-       p 
+  //-         a(href=`/bikes/${bike._id}`)
+  //-           button.btn.btn-primary(type='submit') View Details
+ 

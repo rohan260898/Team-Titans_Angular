@@ -1,0 +1,133 @@
+<style>
+  .container-fluid form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+</style>
+
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-12">
+      <form (ngSubmit)="createNewBike(newBike)">
+        <h2 style="color: #f79522; text-align: center">Create Bike</h2>
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            [(ngModel)]="newBike.name"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="description">Description:</label>
+          <input
+            [(ngModel)]="newBike.description"
+            class="form-control"
+            id="description"
+            name="description"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="model">Model:</label>
+          <input
+            [(ngModel)]="newBike.model"
+            class="form-control"
+            id="model"
+            name="model"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="seats">Seats:</label>
+          <input
+            [(ngModel)]="newBike.seats"
+            class="form-control"
+            id="seats"
+            name="seats"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="launchYear">Launch Year:</label>
+          <input
+            [(ngModel)]="newBike.launchYear"
+            class="form-control"
+            id="launchYear"
+            name="launchYear"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="image">Image:</label>
+          <input
+            [(ngModel)]="newBike.image"
+            class="form-control"
+            id="image"
+            name="image"
+            required
+          />
+        </div>
+        <br />
+        <div class="form-group" style="margin-bottom: 3%">
+          <label for="color">Color: </label>
+          <input
+            [(ngModel)]="newBike.color"
+            class="form-control"
+            id="color"
+            name="color"
+            required
+          />
+        </div>
+        <div class="form-group" style="margin-bottom: 3%">
+          <label for="price">Price: </label>
+          <input
+            [(ngModel)]="newBike.price"
+            class="form-control"
+            id="price"
+            name="price"
+            required
+          />
+        </div>
+        <div class="form-group" style="margin-bottom: 3%">
+          <label for="brand">Brand: </label>
+          <input
+            [(ngModel)]="newBike.brand"
+            class="form-control"
+            id="brand"
+            name="brand"
+            required
+          />
+        </div>
+        <div class="form-group" style="margin-bottom: 3%">
+          <label for="rating">Rating:</label>
+          <select
+            class="form-select"
+            [(ngModel)]="newBike.rating"
+            id="rating"
+            name="rating"
+            required
+          >
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+          </select>
+        </div>
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+        <div style="margin-top: 3%"></div>
+      </form>
+    </div>
+  </div>
+</div>

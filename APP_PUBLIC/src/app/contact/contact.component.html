@@ -1,0 +1,116 @@
+<style>
+  .container-fluid form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+  }
+  .error-message {
+    color: red;
+  }
+</style>
+<br />
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="col-md-6 col-sm-12">
+      <h2 class="text-center" style="color: #f79522">Contact Us</h2>
+      <form (ngSubmit)="onSubmit()" [formGroup]="contactForm">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            formControlName="name"
+            required
+          />
+          <div
+            *ngIf="
+              contactForm.controls['name'].errors &&
+              (contactForm.controls['name'].dirty ||
+                contactForm.controls['name'].touched)
+            "
+          >
+            <div
+              *ngIf="contactForm.controls['name'].errors['required']"
+              class="error-message"
+            >
+              Name is required.
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            formControlName="email"
+            required
+          />
+          <div
+            *ngIf="
+              contactForm.controls['email'].errors &&
+              (contactForm.controls['email'].dirty ||
+                contactForm.controls['email'].touched)
+            "
+          >
+            <div
+              *ngIf="contactForm.controls['email'].errors['required']"
+              class="error-message"
+            >
+              Email is required.
+            </div>
+            <div
+              *ngIf="contactForm.controls['email'].errors['email']"
+              class="error-message"
+            >
+              Invalid email format.
+            </div>
+          </div>
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="message">Message:</label>
+          <textarea
+            class="form-control"
+            id="message"
+            name="message"
+            formControlName="message"
+            required
+          ></textarea>
+          <div
+            *ngIf="
+              contactForm.controls['message'].errors &&
+              (contactForm.controls['message'].dirty ||
+                contactForm.controls['message'].touched)
+            "
+          >
+            <div
+              *ngIf="contactForm.controls['message'].errors['required']"
+              class="error-message"
+            >
+              Message is required.
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <div class="form-group text-center">
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+</div>

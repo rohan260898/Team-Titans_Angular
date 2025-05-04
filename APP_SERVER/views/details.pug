@@ -1,0 +1,27 @@
+extends layout
+
+block content
+    //- book details
+    .row(style="color:black;")
+        .col-md-10.text-center 
+            .card  
+                img.card-img-top(src=currentBike.image style='height:300px;')
+        .col-md-10.col-sm-12
+            br    
+            h2 #{currentBike.name}
+            h4.card-author 
+            h3 by #{currentBike.brand}
+            
+            -for(var i=1; i <= currentBike.rating; i++)
+                span.glyphicon.glyphicon-star(style='color: orange;')
+            -for(var i=currentBike.rating; i < 5; i++)
+                span.glyphicon.glyphicon-star-empty(style='color: orange;')
+            p Price: #{currentBike.price}
+            p Color: #{currentBike.color}
+            p Launch Date: #{currentBike.launchYear}
+            p(style='line-height:20px;') #{currentBike.description} 
+
+        //- user review
+        .col-md-8
+            a.btn.btn-primary(href='/update/' + currentBike._id style='margin-right:10px;') Edit
+            a.btn.btn-primary(href='/delete/' + currentBike._id style='margin-right:10px;') Delete

@@ -1,0 +1,62 @@
+<div class="container">
+  <!-- heading & button to add accessory -->
+  <div class="row mt-3">
+    <div class="col-12">
+      <h2 class="text-center text-primary">List Of Accessories</h2>
+      <hr class="mx-auto" style="width: 20%" />
+    </div>
+    <div class="col-12 text-right">
+      <a class="btn btn-primary" href="accessorycreate">Add Accessory</a>
+    </div>
+  </div>
+
+  <!-- search bar -->
+  <div class="row mt-3">
+    <div class="col-12">
+      <input
+        [(ngModel)]="searchText"
+        (input)="searchAccessories()"
+        class="form-control"
+        type="text"
+        placeholder="Search"
+      />
+    </div>
+  </div>
+
+  <!-- accessory info -->
+  <div class="row mt-3">
+    <div class="col-md-6 mb-4" *ngFor="let accessory of filteredAccessories">
+      <div class="card h-100">
+        <img
+          src="{{ accessory.image }}"
+          class="card-img-top"
+          alt="{{ accessory.name }} - {{ accessory.type }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            {{ accessory.name }} - {{ accessory.type }}
+          </h5>
+          <h6 class="card-text text-center">{{ accessory.price }}</h6>
+        </div>
+        <div class="card-footer text-center">
+          <a class="btn btn-primary" href="/accessory/{{ accessory._id }}"
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pagination controls -->
+  <div class="row mt-3">
+    <div class="col-12">
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item" *ngFor="let page of pages">
+            <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

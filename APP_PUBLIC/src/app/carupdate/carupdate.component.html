@@ -1,0 +1,36 @@
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+    <div class="card p-5">
+        <h2 class="text-center mb-5" style="color: #f79522;">Edit Car</h2>
+        <form (ngSubmit)="editCar(newCar)">
+            <div class="form-group">
+                <label for="make">Make:</label>
+                <input [(ngModel)]="newCar.make" class="form-control form-control-lg" id="make" name="make" required>
+            </div>
+            <div class="form-group">
+                <label for="model">Model:</label>
+                <input [(ngModel)]="newCar.model" class="form-control form-control-lg" id="model" name="model" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input [(ngModel)]="newCar.year" class="form-control form-control-lg" id="year" name="year" required>
+            </div>
+     
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input [(ngModel)]="newCar.color" class="form-control form-control-lg" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input [(ngModel)]="newCar.price" class="form-control form-control-lg" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input [(ngModel)]="newCar.image" class="form-control form-control-lg" id="image" name="image" required>
+            </div>
+            <div class="form-group text-center mt-4">    
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

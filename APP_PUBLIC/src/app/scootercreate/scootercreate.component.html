@@ -1,0 +1,51 @@
+<style>
+    .container-fluid form {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 20px;
+    }
+  </style>
+  
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-sm-12">
+        <form (ngSubmit) = "createNewScooter(newScooter)">
+          <h2 style="color:#f79522; text-align:center;">Create Scooter</h2> 
+          <div class="form-group">
+            <label for="make">Make:</label>
+            <input [(ngModel)]="newScooter.make" class="form-control" id="make" name="make" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="model">Model:</label>
+            <input [(ngModel)]="newScooter.model" class="form-control" id="model" name="model" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="year">Year:</label>
+            <input [(ngModel)]="newScooter.year" class="form-control" id="year" name="year" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="color">Color:</label>
+            <input [(ngModel)]="newScooter.color" class="form-control" id="color" name="color" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="price">Price:</label>
+            <input [(ngModel)]="newScooter.price" class="form-control" id="price" name="price" required>
+          </div>
+          <br>
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input [(ngModel)]="newScooter.image" class="form-control" id="image" name="image" required>
+          </div>
+          <br>
+          <div class="form-group text-center">    
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

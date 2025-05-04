@@ -1,0 +1,48 @@
+extends layout 
+
+block content
+    .container-fluid(style="color:black;")
+        br
+        br
+        br
+        
+        h2 Update Bike
+        #banner.page-header
+        br
+        //- form
+        .row
+            .col-md-4
+                form(method='post' action='' role='form')
+                    .form-group
+                        label(for='name') Name:
+                        input.form-control(type='text' name='name'  value=(undefined===currentBike ? "" :currentBike.name))
+                    .form-group
+                        label(for='description') Description:
+                        input.form-control(type='text' name='description'  value=(undefined===currentBike ? "" :currentBike.description) )
+                    .form-group
+                        label(for='model')  Model :
+                        input.form-control(type='text' name='model'  value=(undefined===currentBike ? "" :currentBike.model)  )
+                    .form-group
+                        label(for='seats')  Seats :
+                        input.form-control(type='text' name='seats'  value=(undefined===currentBike ? "" :currentBike.seats) )
+                    .form-group
+                        label(for='launchYear') Launch Year :
+                        input.form-control(type='text' name='launchYear'  value=(undefined===currentBike ? "" :currentBike.launchYear))
+                    .form-group
+                        label(for='image')  Image :
+                        input.form-control(type='text' name='image'   value=(undefined===currentBike ? "" :currentBike.image))
+                    .form-group
+                        label(for='color') Color :
+                        input.form-control(type='text' name='color'  value=(undefined===currentBike ? "" :currentBike.color))
+                    .form-group
+                        label(for='price') Price :
+                        input.form-control(type='text' name='price'  value=(undefined===currentBike ? "" :currentBike.price))
+                    .form-group
+                        label(for='brand') Brand :
+                        input.form-control(type='text' name='brand'  value=(undefined===currentBike ? "" :currentBike.brand))
+                    .form-group
+                        label(for='rating') Rating :
+                        input#rating.form-control(type='text' name='rating'  value=(undefined===currentBike ? "" :currentBike.rating))
+                    
+                    br 
+                    button.btn.btn-primary(type='submit') Submit

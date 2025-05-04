@@ -1,0 +1,61 @@
+<div class="container">
+  <!-- heading & button to add scooter -->
+  <div class="row mt-3">
+    <div class="col-12">
+      <h2 class="text-center text-primary">List Of Scooters</h2>
+      <hr class="mx-auto" style="width: 20%" />
+    </div>
+    <div class="col-12 text-right">
+      <a class="btn btn-primary" href="scootercreate">Add Scooter</a>
+    </div>
+  </div>
+
+  <!-- search bar -->
+  <div class="row mt-3">
+    <div class="col-12">
+      <input
+        [(ngModel)]="searchText"
+        (input)="searchScooters()"
+        class="form-control"
+        type="text"
+        placeholder="Search"
+      />
+    </div>
+  </div>
+
+  <!-- scooter info -->
+  <div class="row mt-3">
+    <div class="col-md-6 mb-4" *ngFor="let scooter of filteredScooters">
+      <div class="card h-100">
+        <img
+          src="{{ scooter.image }}"
+          class="card-img-top"
+          alt="{{ scooter.make }} {{ scooter.model }}"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">
+            {{ scooter.make }} {{ scooter.model }} - {{ scooter.year }}
+          </h5>
+          <p class="card-text text-center">{{ scooter.color }}</p>
+          <h6 class="card-text text-center">{{ scooter.price }}</h6>
+        </div>
+        <div class="card-footer text-center">
+          <a class="btn btn-primary" href="/scooter/{{ scooter._id }}">View Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- pagination controls -->
+  <div class="row mt-3">
+    <div class="col-12">
+      <nav>
+        <ul class="pagination justify-content-center">
+          <li class="page-item" *ngFor="let page of pages">
+            <a class="page-link" (click)="goToPage(page)">{{ page }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>

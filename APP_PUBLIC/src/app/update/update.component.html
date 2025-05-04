@@ -1,0 +1,58 @@
+<div class="container-fluid d-flex align-items-center justify-content-center vh-100">
+    <div class="card p-5">
+        <h2 class="text-center mb-5" style="color: #f79522;">Edit Bike</h2>
+        <form (ngSubmit)="editBike(newBike)">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input [(ngModel)]="newBike.name" class="form-control form-control-lg" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <input [(ngModel)]="newBike.description" class="form-control form-control-lg" id="description" name="description" required>
+            </div>
+           
+            <div class="form-group">
+                <label for="model">Model:</label>
+                <input [(ngModel)]="newBike.model" class="form-control form-control-lg" id="model" name="model" required>
+            </div>
+         
+            <div class="form-group">
+                <label for="seats">Seats:</label>
+                <input [(ngModel)]="newBike.seats" class="form-control form-control-lg" id="seats" name="seats" required>
+            </div>
+            <div class="form-group">
+                <label for="launchYear">Launch Year:</label>
+                <input [(ngModel)]="newBike.launchYear" class="form-control form-control-lg" id="launchYear" name="launchYear" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Image:</label>
+                <input [(ngModel)]="newBike.image" class="form-control form-control-lg" id="image" name="image" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input [(ngModel)]="newBike.color" class="form-control form-control-lg" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input [(ngModel)]="newBike.price" class="form-control form-control-lg" id="price" name="price" required>
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <input [(ngModel)]="newBike.brand" class="form-control form-control-lg" id="brand" name="brand" required>
+            </div>
+            <div class="form-group">
+                <label for="rating">Rating:</label>
+                <select class="form-select form-select-lg" [(ngModel)]="newBike.rating" id="rating" name="rating" required>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                </select>
+            </div>
+            <div class="form-group text-center mt-4">    
+                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
